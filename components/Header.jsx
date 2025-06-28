@@ -5,14 +5,18 @@ import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 export default function Header() {
   return (
-    <div className='flex justify-between items-center p-3 max-w-6xl mx-auto'>
+    <div className='flex justify-between items-center p-3 max-w-7xl mx-auto'>
       <ul className='flex gap-4'>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <Link className='border rounded-2xl border-amber-500 px-4 py-1 text-amber-500
+           font-semibold hover:bg-amber-500 hover:text-white transition-colors duration-300' href="/sign-in">Sign In</Link>
+        </SignedOut>
         <li>
           <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/movies">Movies</Link>
-        </li>
+        </li> 
         <li>
           <Link href="/about">About</Link>
         </li>
@@ -25,13 +29,7 @@ export default function Header() {
         </span>
         <span className='text-xl hidden sm:inline'>Clone</span>
       </Link>
-      <SignedIn>
-          <UserButton />
-        </SignedIn>
-        <SignedOut>
-          <Link className='border rounded-2xl border-amber-500 px-4 py-1 text-amber-500
-           font-semibold hover:bg-amber-500 hover:text-white transition-colors duration-300' href="/sign-in">Sign In</Link>
-        </SignedOut>
+     
          
     </div>
   </div>

@@ -9,7 +9,8 @@ export default function Header() {
           <UserButton />
         </SignedIn>
         <SignedOut>
-          <Link href={'/sign-in'}>Sign in</Link>
+          <Link href={'/sign-in'} className="border-2 border-amber-500 bg-amber-500 text-black font-bold hover:bg-white hover:text-amber-500 px-3 py-1 rounded-lg">
+          Sign in</Link>
         </SignedOut>
         <li className="hidden sm:block">
           <Link href={'/'}>Home</Link>

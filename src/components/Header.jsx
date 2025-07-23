@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-
+import { ThemeToggle } from "@/components/theme-toggle";
 export default function Header() {
   return (
     <div className="flex items-center justify-between p-3 max-w-7xl mx-auto">
@@ -19,6 +19,7 @@ export default function Header() {
           <Link href={'/about'}>About</Link>
         </li>
       </ul>
+      <ThemeToggle />
       <Link href={'/'} className="flex gap-1 items-center">
         <span className="text-2xl font-bold bg-amber-500 py-1 px-1 rounded-xl">
           IMDb
